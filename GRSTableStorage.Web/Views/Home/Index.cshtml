@@ -1,0 +1,30 @@
+﻿<!--
+//===============================================================================
+// Microsoft FastTrack for Azure
+// Azure Read Access Geo-Redundant Table Storage Samples
+//===============================================================================
+// Copyright © Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+-->
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <p>@Html.ActionLink("List Authors from Primary", "Authors", "Home", new { location = "primary" }, new { @class = "btn btn-primary" })</p>
+        <p>@Html.ActionLink("List Authors from Secondary", "Authors", "Home", new { location = "secondary" }, new { @class = "btn btn-secondary" })</p>
+    </div>
+    <div class="col-md-4">
+        <p>@Html.ActionLink("List Publishers from Primary", "Publishers", "Home", new { location = "primary" }, new { @class = "btn btn-primary" })</p>
+        <p>@Html.ActionLink("List Publishers from Secondary", "Publishers", "Home", new { location = "secondary" }, new { @class = "btn btn-secondary" })</p>
+    </div>
+    <div class="col-md-4">
+        <p>@Html.ActionLink("List Titles from Primary", "Titles", "Home", new { location = "primary" }, new { @class = "btn btn-primary" })</p>
+        <p>@Html.ActionLink("List Titles from Secondary", "Titles", "Home", new { location = "secondary" }, new { @class = "btn btn-secondary" })</p>
+    </div>
+</div>

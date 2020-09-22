@@ -1,0 +1,56 @@
+﻿<!--
+//===============================================================================
+// Microsoft FastTrack for Azure
+// Azure Read Access Geo-Redundant Table Storage Samples
+//===============================================================================
+// Copyright © Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+-->
+@model IEnumerable<GRSTableStorage.Web.Models.Author>
+
+@{
+    ViewBag.Title = "Authors";
+}
+
+<div class="well well-sm">
+    <h2>Authors</h2>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasContract)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <address>
+                        @Html.DisplayFor(modelItem => item.Address)<br />
+                        @Html.DisplayFor(modelItem => item.City), @Html.DisplayFor(modelItem => item.State) @Html.DisplayFor(modelItem => item.PostalCode)<br />
+                        Phone: @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </address>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasContract)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
